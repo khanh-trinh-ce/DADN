@@ -6,7 +6,7 @@ from Adafruit_IO import MQTTClient
 
 AIO_FEED_ID = ["dadn-brgt", "dadn-gas", "dadn-humi", "dadn-temp", "dadn-lcd-control", "dadn-prediction"]
 AIO_USERNAME = "khanh_trinh_ce"
-AIO_KEY = "aio_FBTk68C2g4QqfckpjQYVJg78RNsr"
+AIO_KEY = "aio_JjaY38b0raSYVBP2mBfYQl3TXyjw"
 
 
 def connected(client):
