@@ -6,7 +6,7 @@ from Adafruit_IO import MQTTClient
 
 AIO_FEED_ID = ["dadn-brgt", "dadn-gas", "dadn-humi", "dadn-temp", "dadn-lcd-control", "dadn-prediction"]
 AIO_USERNAME = "khanh_trinh_ce"
-AIO_KEY = "aio_wuoQ443VAhXbRM3h0RPh4lEDiFc1"
+AIO_KEY = "aio_FBTk68C2g4QqfckpjQYVJg78RNsr"
 
 
 def connected(client):
@@ -95,7 +95,7 @@ def read_serial():
 while True:
     if is_microbit_connected:
         read_serial()
-
-    client.publish("dadn-temp", random.randint(1,100))
+    for feed in range(4):
+        client.publish(AIO_FEED_ID[feed], random.randint(0, 100))
     time.sleep(10)
 
